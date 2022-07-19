@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[678],{6558:function(e,t,n){n.r(t);var u=n(7294),a=n(2442);t.default=function(){return u.createElement(a.Z,null,"I might have written a few articles here. You can check those out on blog page.")}}}]);
+//# sourceMappingURL=component---src-pages-index-js-7aaa026a7539bc00b341.js.map

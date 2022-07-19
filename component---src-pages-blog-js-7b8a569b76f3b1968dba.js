@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[7],{5502:function(e,t,l){l.r(t);var n=l(7294),u=l(2442);t.default=function(){return n.createElement(u.Z,null,n.createElement("div",null,n.createElement("h1",null,"Post #1 ",n.createElement("span",{style:{fontSize:"14px",color:"rgba(0,0,0,0.5)"}},"19th July 2022")," ")),n.createElement("p",null,"Built this awesome site with Gatsby"))}}}]);
+//# sourceMappingURL=component---src-pages-blog-js-7b8a569b76f3b1968dba.js.map
