@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from '../components/Layout';
 
 const Blog = () => {
-    console.log(data)
     return(
         <Layout>
             <div>
