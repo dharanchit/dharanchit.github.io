@@ -15,8 +15,12 @@ The site runs at `http://localhost:8000`.
 
 ```shell
 npm run build   # outputs to public/
-npm run deploy  # builds and pushes public/ to the main branch via gh-pages
 ```
+
+Deployment is automatic: a GitHub Actions workflow (`.github/workflows/deploy.yml`)
+builds the site and publishes it to GitHub Pages on every push to `main`. This
+requires the repo's Pages source to be set to "GitHub Actions" under
+Settings → Pages.
 
 ## Structure
 
