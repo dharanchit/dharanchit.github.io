@@ -7,15 +7,24 @@ const Home = () => {
     <Layout>
       <section style={{ padding: "var(--space-3) 0 var(--space-4)" }}>
         <h1>Hi, I&apos;m Anchit.</h1>
+        <p
+          style={{
+            color: "var(--color-text-muted)",
+            marginTop: "calc(var(--space-2) * -1)",
+          }}
+        >
+          Senior Software Engineer · Bengaluru
+        </p>
         <p>
-          I&apos;m a full stack developer who started out as a manufacturing
-          engineer before moving into software. I build things with React,
-          Node, and Django, and write here about what I&apos;m learning along
-          the way.
+          I build high-throughput fintech systems and AI-driven platforms.
+          Currently an Applied AI Engineer at JPMorgan Chase, working on LLM
+          orchestration and multi-agent systems, after stints at Fyers and
+          Tifin building trading and investment products in Go, React, and
+          Kafka.
         </p>
         <p>
           Have a look at <Link to="/blog">what I&apos;ve been writing</Link>,
-          read a bit <Link to="/about">about me</Link>, or{" "}
+          read more <Link to="/about">about me</Link>, or{" "}
           <Link to="/contact">get in touch</Link>.
         </p>
       </section>

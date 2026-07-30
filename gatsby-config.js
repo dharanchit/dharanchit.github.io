@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Anchit Dhar`,
-    description: `Personal site and blog of Anchit Dhar — full stack developer.`,
+    description: `Personal site and blog of Anchit Dhar — senior software engineer working on AI-driven platforms and fintech systems.`,
     siteUrl: `https://dharanchit.github.io`,
   },
   plugins: [

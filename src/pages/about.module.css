@@ -1,0 +1,100 @@
+.intro {
+  margin-bottom: var(--space-4);
+}
+
+.location {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  margin: calc(var(--space-2) * -1) 0 var(--space-3);
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.entry {
+  border-left: 2px solid var(--color-border);
+  padding-left: var(--space-2);
+}
+
+.entryHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-2);
+  margin-bottom: var(--space-1);
+}
+
+.role {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.company {
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+.dates {
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.bullets {
+  margin: var(--space-1) 0 0;
+  padding-left: 1.1rem;
+}
+
+.bullets li {
+  margin-bottom: var(--space-1);
+  color: var(--color-text);
+}
+
+.bullets li:last-child {
+  margin-bottom: 0;
+}
+
+.skillGroups {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.skillGroup {
+  display: flex;
+  gap: var(--space-1) var(--space-2);
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.skillLabel {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  min-width: 6rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  font-size: 0.78rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+}
+
+.education {
+  border-left: 2px solid var(--color-border);
+  padding-left: var(--space-2);
+}
