@@ -17,10 +17,9 @@ const Home = () => {
         </p>
         <p>
           I build high-throughput fintech systems and AI-driven platforms.
-          Currently an Applied AI Engineer at JPMorgan Chase, working on LLM
-          orchestration and multi-agent systems, after stints at Fyers and
-          Tifin building trading and investment products in Go, React, and
-          Kafka.
+          I currently work as an Applied AI Engineer, focused on LLM
+          orchestration and multi-agent systems, after building trading and
+          investment products in Go, React, and Kafka.
         </p>
         <p>
           Have a look at <Link to="/blog">what I&apos;ve been writing</Link>,
