@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/Layout"
+import Seo from "../components/Seo"
 import { posts } from "../data/posts"
 import * as styles from "./blog.module.css"
 
@@ -31,4 +32,10 @@ const Blog = () => {
 
 export default Blog
 
-export const Head = () => <title>Blog · Anchit Dhar</title>
+export const Head = () => (
+  <Seo
+    title="Blog"
+    description="Writing on software engineering, AI systems, and the occasional career note."
+    pathname="/blog"
+  />
+)

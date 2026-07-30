@@ -1,5 +1,6 @@
 import React from "react"
 import Post from "../../components/Post"
+import Seo from "../../components/Seo"
 import { posts } from "../../data/posts"
 
 const meta = posts.find(p => p.slug === "factory-floor-to-terminal")
@@ -33,4 +34,10 @@ const FactoryFloorToTerminal = () => {
 
 export default FactoryFloorToTerminal
 
-export const Head = () => <title>{meta.title} · Anchit Dhar</title>
+export const Head = () => (
+  <Seo
+    title={meta.title}
+    description={meta.excerpt}
+    pathname={`/blog/${meta.slug}`}
+  />
+)

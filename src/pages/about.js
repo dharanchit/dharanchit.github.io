@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
+import Seo from "../components/Seo"
 import { experience, education } from "../data/experience"
 import { skills } from "../data/skills"
 import * as styles from "./about.module.css"
@@ -78,4 +79,10 @@ const About = () => {
 
 export default About
 
-export const Head = () => <title>About · Anchit Dhar</title>
+export const Head = () => (
+  <Seo
+    title="About"
+    description="5+ years building fintech systems and AI-driven platforms, from manufacturing engineering to LLM orchestration."
+    pathname="/about"
+  />
+)

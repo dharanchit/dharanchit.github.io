@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
+import Seo from "../components/Seo"
 import { Link } from "gatsby"
 
 const NotFoundPage = () => {
@@ -21,4 +22,4 @@ const NotFoundPage = () => {
 
 export default NotFoundPage
 
-export const Head = () => <title>Not found · Anchit Dhar</title>
+export const Head = () => <Seo title="Not found" pathname="/404" />

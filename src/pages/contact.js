@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
+import Seo from "../components/Seo"
 
 const Contact = () => {
   return (
@@ -23,4 +24,10 @@ const Contact = () => {
 
 export default Contact
 
-export const Head = () => <title>Contact · Anchit Dhar</title>
+export const Head = () => (
+  <Seo
+    title="Contact"
+    description="Get in touch with Anchit Dhar."
+    pathname="/contact"
+  />
+)

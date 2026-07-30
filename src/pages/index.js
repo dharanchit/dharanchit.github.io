@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/Layout"
+import Seo from "../components/Seo"
 import * as styles from "./index.module.css"
 
 const Home = () => {
@@ -30,4 +31,6 @@ const Home = () => {
 
 export default Home
 
-export const Head = () => <title>Anchit Dhar</title>
+export const Head = () => (
+  <Seo description="Senior software engineer working on high-throughput fintech systems and AI-driven platforms." />
+)
