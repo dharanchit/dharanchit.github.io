@@ -1,18 +1,15 @@
 import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/Layout"
+import * as styles from "./index.module.css"
 
 const Home = () => {
   return (
     <Layout>
-      <section style={{ padding: "var(--space-3) 0 var(--space-4)" }}>
+      <section className={styles.hero}>
         <h1>Hi, I&apos;m Anchit.</h1>
-        <p
-          style={{
-            color: "var(--color-text-muted)",
-            marginTop: "calc(var(--space-2) * -1)",
-          }}
-        >
+        <p className={styles.role}>
+          <span className={styles.dot} />
           Senior Software Engineer · Bengaluru
         </p>
         <p>
@@ -21,7 +18,7 @@ const Home = () => {
           orchestration and multi-agent systems, after building trading and
           investment products in Go, React, and Kafka.
         </p>
-        <p>
+        <p className={styles.links}>
           Have a look at <Link to="/blog">what I&apos;ve been writing</Link>,
           read more <Link to="/about">about me</Link>, or{" "}
           <Link to="/contact">get in touch</Link>.

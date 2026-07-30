@@ -1,0 +1,23 @@
+.hero {
+  padding: var(--space-3) 0 var(--space-4);
+}
+
+.role {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-text-muted);
+  margin-top: calc(var(--space-2) * -1);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.links a {
+  text-decoration: none;
+}
