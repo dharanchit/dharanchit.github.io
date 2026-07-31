@@ -41,6 +41,12 @@ jobs:
         with:
           path: public
 
+      - name: Upload build for mirror
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-build
+          path: public
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -51,3 +57,25 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  mirror:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download build
+        uses: actions/download-artifact@v4
+        with:
+          name: public-build
+          path: public
+
+      - name: Mirror to goanchit.github.io
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          deploy_key: ${{ secrets.GOANCHIT_DEPLOY_KEY }}
+          external_repository: goanchit/goanchit.github.io
+          publish_branch: main
+          publish_dir: ./public
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
+          commit_message: "Mirror from dharanchit.github.io"
+          force_orphan: false
