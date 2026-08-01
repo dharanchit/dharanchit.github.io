@@ -5,12 +5,6 @@ module.exports = {
     siteUrl: `https://dharanchit.github.io`,
   },
   plugins: [
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: "G-5GCDLH40J5",
-      },
-    },
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
