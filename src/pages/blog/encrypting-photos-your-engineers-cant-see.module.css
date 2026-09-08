@@ -1,0 +1,48 @@
+.figure {
+  margin: var(--space-3) 0 var(--space-4);
+}
+
+.diagram {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.caption {
+  margin: var(--space-1) 0 0;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.box {
+  fill: var(--color-bg);
+  stroke: var(--color-border);
+  stroke-width: 1.5;
+}
+
+.boxAccent {
+  fill: var(--color-accent-soft);
+  stroke: var(--color-accent);
+  stroke-width: 1.5;
+}
+
+.label {
+  fill: var(--color-text);
+  font-family: var(--font-sans);
+}
+
+.labelMuted {
+  fill: var(--color-text-muted);
+  font-family: var(--font-sans);
+}
+
+.mono {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+.arrow {
+  stroke: var(--color-text-muted);
+  stroke-width: 1.5;
+  fill: none;
+}
