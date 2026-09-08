@@ -6,6 +6,14 @@ import * as styles from "./encrypting-photos-your-engineers-cant-see.module.css"
 
 const meta = posts.find(p => p.slug === "encrypting-photos-your-engineers-cant-see")
 
+const Cite = ({ n }) => (
+  <sup className={styles.footnote}>
+    <a href={`#ref-${n}`} id={`cite-${n}`}>
+      [{n}]
+    </a>
+  </sup>
+)
+
 const UploadDiagram = () => (
   <figure className={styles.figure}>
     <svg
@@ -208,10 +216,12 @@ const EncryptingPhotos = () => {
 
       <h2>Envelope encryption, not one big key</h2>
       <p>
-        The building block is <em>envelope encryption</em>. Instead of
+        The building block is <em>envelope encryption</em>
+        <Cite n={1} />. Instead of
         encrypting every photo with one key that unlocks everything, each
         file gets its own randomly generated symmetric key &mdash; a{" "}
-        <em>data encryption key</em>, or DEK &mdash; used once, with AES-256-GCM.
+        <em>data encryption key</em>, or DEK &mdash; used once, with
+        AES-256-GCM<Cite n={2} />.
         That key is then itself encrypted (&ldquo;wrapped&rdquo;) with a
         second key, the account&apos;s <em>key-encryption key</em> (KEK). The
         wrapped DEK is small, so it travels with the file&apos;s metadata
@@ -235,7 +245,7 @@ const EncryptingPhotos = () => {
         WhatsApp both do a version of this for multi-device sync: a new
         device proves it belongs to the account, then receives the wrapped
         keys it needs re-wrapped for its own local key, without the server
-        ever holding a usable copy in between.
+        ever holding a usable copy in between<Cite n={3} />.
       </p>
       <p>
         Backups complicate this, because &ldquo;forgot your password, lost
@@ -245,7 +255,7 @@ const EncryptingPhotos = () => {
         module they say is deliberately built so that not even WhatsApp can
         extract keys from it in bulk &mdash; it only ever answers &ldquo;does
         this guess unlock this one backup,&rdquo; and locks itself after a
-        handful of wrong tries. That last mile &mdash; account recovery
+        handful of wrong tries<Cite n={4} />. That last mile &mdash; account recovery
         without a plaintext escape hatch &mdash; is the hardest part of this
         whole design, harder than the AES-GCM call.
       </p>
@@ -289,9 +299,9 @@ const EncryptingPhotos = () => {
         original; or, for the one case regulators actually push on &mdash;
         CSAM detection &mdash; they attempt on-device perceptual hashing
         against a known-bad set before encryption, which is exactly the
-        approach Apple proposed in 2021 and then shelved after enough
-        people pointed out what a general-purpose on-device scanner could
-        be repurposed into.
+        approach Apple proposed in 2021<Cite n={5} /> and then shelved after
+        enough people pointed out what a general-purpose on-device scanner
+        could be repurposed into<Cite n={6} />.
       </p>
       <p>
         None of this is exotic cryptography. It&apos;s AES-GCM and a key
@@ -299,6 +309,80 @@ const EncryptingPhotos = () => {
         changes is a single design decision: where the unwrap happens. Move
         it off the server, and you&apos;ve changed who has to trust whom.
       </p>
+
+      <h2>Sources</h2>
+      <ol className={styles.references}>
+        <li id="ref-1">
+          AWS,{" "}
+          <a
+            href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#enveloping"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            &ldquo;Envelope encryption&rdquo;, AWS Key Management Service
+            Developer Guide
+          </a>
+          .
+        </li>
+        <li id="ref-2">
+          NIST,{" "}
+          <a
+            href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            SP 800-38D: Recommendation for Block Cipher Modes of Operation:
+            Galois/Counter Mode (GCM) and GMAC
+          </a>
+          .
+        </li>
+        <li id="ref-3">
+          Signal,{" "}
+          <a
+            href="https://signal.org/docs/specifications/sesame/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            &ldquo;The Sesame Algorithm: Session Management for Asynchronous
+            Message Encryption&rdquo;
+          </a>
+          .
+        </li>
+        <li id="ref-4">
+          WhatsApp,{" "}
+          <a
+            href="https://www.whatsapp.com/security/WhatsApp_Security_Encrypted_Backups_Whitepaper.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            &ldquo;WhatsApp End-to-End Encrypted Backups&rdquo; (whitepaper)
+          </a>
+          .
+        </li>
+        <li id="ref-5">
+          Apple,{" "}
+          <a
+            href="https://www.apple.com/child-safety/pdf/CSAM_Detection_Technical_Summary.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            &ldquo;CSAM Detection &mdash; Technical Summary&rdquo;
+          </a>
+          .
+        </li>
+        <li id="ref-6">
+          EFF,{" "}
+          <a
+            href="https://www.eff.org/deeplinks/2021/08/apples-plan-think-different-about-encryption-opens-backdoor-your-private-life"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            &ldquo;Apple&apos;s Plan to &lsquo;Think Different&rsquo; About
+            Encryption Opens a Backdoor to Your Private Life&rdquo;
+          </a>
+          .
+        </li>
+      </ol>
     </Post>
   )
 }
