@@ -42,25 +42,3 @@
   stroke-width: 1.5;
   fill: none;
 }
-
-.footnote {
-  font-size: 0.75em;
-  padding: 0 0.15em;
-}
-
-.checklist li {
-  margin-bottom: var(--space-1);
-}
-
-.references {
-  margin: 0;
-  padding-left: 1.25em;
-}
-
-.references li {
-  margin-bottom: var(--space-1);
-}
-
-.references a {
-  word-break: break-word;
-}

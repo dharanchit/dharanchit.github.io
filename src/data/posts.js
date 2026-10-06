@@ -1,10 +1,10 @@
 export const posts = [
   {
     slug: "building-is-cheap-distribution-is-the-moat",
-    title: "Building is cheap now. Distribution is the moat.",
+    title: "Building is cheap now. Here's how I'm marketing fram.d.",
     date: "2026-10-06",
     excerpt:
-      "AI made shipping a product easy, so getting it in front of people is the hard part. A staged, evidence-backed plan for taking a consumer app from zero users to revenue.",
+      "Shipping an app is the easy part now. My plan for getting fram.d, a private shared-memory app with no public feed, into the hands of real friend groups.",
   },
   {
     slug: "encrypting-photos-your-engineers-cant-see",
